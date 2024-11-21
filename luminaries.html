@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Office - Luminaries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        header div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+        }
+
+        header .header-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        header .subheader-text {
+            font-size: 1rem;
+        }
+
+        /* Navigation Menu Styling */
+        nav {
+            background-color: #006400;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            text-align: center;
+        }
+
+        nav ul li a:hover {
+            background-color: #eaee0f;
+            border-radius: 5px; 
+        }
+
+        /* Dropdown Menu Styling */
+        nav .dropdown .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        nav .dropdown .dropdown-content a {
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+
+        nav .dropdown .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* PDF List */
+        .pdf-list {
+            background-color: white;
+            padding: 10px;
+            margin: 20px auto; /* Center the list */
+            max-width: 1000px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .pdf {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Create 2 equal-width columns */
+            gap: 20px;  /* Space between items */
+            justify-items: center;
+        }
+
+        .pdf-item {
+            flex: 0 0 calc(50% - 20px); /* Ensure two items per row */
+            max-width: calc(50% - 20px); /* Prevent overflow */
+            background-color: #9eb619;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pdf-item img {
+            max-width: 100%; /* Prevent image overflow */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px;
+        }
+
+        .pdf-item-content h3 {
+            font-size: 1.25rem;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .pdf-item-content p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        /* Explore Button */
+        .explore-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .explore-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .pdf-item {
+                flex: 0 0 100%; /* Take full width on small screens */
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="dkut logo.png" class="logo" alt="DKUT Logo">
+        <div>
+            <div class="header-text">Marketing Office</div>
+            <div class="subheader-text">Dedan Kimathi University of Technology</div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Champions Mentorship.html">Champion Mentorship</a></li>
+            <li class="dropdown">
+                <a href="#">Events</a>
+                <div class="dropdown-content">
+                    <a href="upcomingevents.html">Upcoming Events</a>
+                    <a href="pastevents.html">Past Events</a>
+                </div>
+            </li>
+            <li><a href="InfoHub.html">InfoHub</a></li>
+            <li><a href="contacts.html">Contact Us</a></li>
+            <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
+        </ul>
+    </nav>
+
+    <div class="section-title">
+        <h2 class="section-title">Meet the Luminaries</h2>
+        <p>
+            Discover the inspiring stories of our alumni who have made significant contributions in their careers and communities.<br>
+            These luminaries share their experiences, lessons learned, and the paths they’ve taken since graduating. 
+            Click the <b>"Explore"</b> button to delve deeper into their journeys and insights.
+        </p>
+    </div>
+
+    <div class="pdf-list">
+        <div class="pdf">
+            <div class="pdf-item">
+                <img src="images/einstein.jpg" alt="Albert Einstein">
+                <div class="pdf-item-content">
+                    <h3>Albert Einstein</h3>
+                    <p>Theoretical physicist who developed the theory of relativity.</p>
+                </div>
+                <a href="pdfs/albert-einstein.pdf" target="_blank" class="explore-button">Explore</a>
+            </div>
+            <div class="pdf-item">
+                <img src="images/curie.jpg" alt="Marie Curie">
+                <div class="pdf-item-content">
+                    <h3>Marie Curie</h3>
+                    <p>Renowned for her pioneering research on radioactivity.</p>
+                </div>
+                <a href="pdfs/marie-curie.pdf" target="_blank" class="explore-button">Explore</a>
+            </div>
+            <div class="pdf-item">
+                <img src="images/mandela.jpg" alt="Nelson Mandela">
+                <div class="pdf-item-content">
+                    <h3>Nelson Mandela</h3>
+                    <p>Anti-apartheid revolutionary and former president of South Africa.</p>
+                </div>
+                <a href="pdfs/nelson-mandela.pdf" target="_blank" class="explore-button">Explore</a>
+            </div>
+            <div class="pdf-item">
+                <img src="https://i.pinimg.com/736x/a0/fb/7a/a0fb7a66b03e44640723c5e20b7f391b.jpg" alt="Steve Jobs">
+                <div class="pdf-item-content">
+                    <h3>Steve Jobs</h3>
+                    <p>Visionary co-founder of Apple Inc., known for his innovative leadership.</p>
+                </div>
+                <a href="pdfs/steve-jobs.pdf" target="_blank" class="explore-button">Explore</a>
+            </div>
+            <div class="pdf-item">
+              <img src="images/mandela.jpg" alt="Nelson Mandela">
+              <div class="pdf-item-content">
+                  <h3>Nelson Mandela</h3>
+                  <p>Anti-apartheid revolutionary and former president of South Africa.</p>
+              </div>
+              <a href="pdfs/nelson-mandela.pdf" target="_blank" class="explore-button">Explore</a>
+          </div>
+          <div class="pdf-item">
+              <img src="https://i.pinimg.com/736x/a0/fb/7a/a0fb7a66b03e44640723c5e20b7f391b.jpg" alt="Steve Jobs">
+              <div class="pdf-item-content">
+                  <h3>Steve Jobs</h3>
+                  <p>Visionary co-founder of Apple Inc., known for his innovative leadership.</p>
+              </div>
+              <a href="pdfs/steve-jobs.pdf" target="_blank" class="explore-button">Explore</a>
+          </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dedan Kimathi University of Technology. All Rights Reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+    </footer>
+</body>
+</html>

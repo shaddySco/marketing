@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newsletters | InfoHub</title>
+  <style>
+    /* Reset default browser styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    
+    /* Header Styling */
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+
+    header .header-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    header .subheader-text {
+      font-size: 1rem;
+    }
+
+    /* Navigation Menu Styling */
+    nav {
+      background-color: #006400;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #eaee0f;
+      border-radius: 5px; 
+    }
+
+    /* Banner Section Styling */
+    .banner {
+      background-image: url('https://via.placeholder.com/1600x600');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 150px 20px;
+      text-align: center;
+    }
+
+    .banner h2 {
+      font-size: 48px;
+      font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* Content Sections Styling */
+    main {
+      padding: 40px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .content-section {
+      background-color: white;
+      padding: 10px;
+      margin: 20px 0;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .content-section h2 {
+      color: #23610b;
+      background-color: #eaee0f;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .newsletter-item {
+      padding: 20px;
+      background-color: #9eb619;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsletter-item h3 {
+      font-size: 1.6rem;
+      color: #333;
+    }
+
+    .newsletter-item p {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .newsletter-item a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 15px;
+      background-color: #004d00;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s;
+    }
+
+    .newsletter-item a:hover {
+      background-color: #23610b;
+    }
+
+    footer {
+      background-color: #004d00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="dkut_logo.png" class="logo" alt="Logo">
+    <div>
+      <div class="header-text">Marketing Office</div>
+      <div class="subheader-text">Dedan Kimathi University of Technology</div>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Champions_Mentorship.html">Champion Mentorship</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="upcomingevents.html">Upcoming Events</a>
+          <a href="pastevents.html">Past Events</a>
+        </div>
+      </li>
+      <li><a href="InfoHub.html">InfoHub</a></li>
+      <li><a href="contacts.html">Contact Us</a></li>
+      <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <h2>Welcome to Newsletters</h2>
+    <p>Explore our latest updates and stories from the campus and beyond.</p>
+  </section>
+
+  <!-- Content Sections -->
+  <main>
+    <section class="content-section">
+      <h2>Latest Newsletters</h2>
+      <div class="newsletter-item">
+        <h3>Newsletter: Week 1</h3>
+        <p>Highlights: Engineering Innovations, Campus Activities.</p>
+        <a href="newsletter_week1.pdf" target="_blank">View Newsletter</a>
+      </div>
+      <div class="newsletter-item">
+        <h3>Newsletter: Week 2</h3>
+        <p>Highlights: Business Trends, Cultural Events.</p>
+        <a href="newsletter_week2.pdf" target="_blank">View Newsletter</a>
+      </div>
+      <div class="newsletter-item">
+        <h3>Newsletter: Week 3</h3>
+        <p>Highlights: Technology Updates, Sports Week Recap.</p>
+        <a href="newsletter_week3.pdf" target="_blank">View Newsletter</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 Marketing Office | Dedan Kimathi University of Technology</p>
+    <p><a href="mailto:info@dkut.ac.ke">Contact Us</a></p>
+  </footer>
+</body>
+</html>

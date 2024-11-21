@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+        header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+
+    header .header-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    header .subheader-text {
+      font-size: 1rem;
+    }
+
+    /* Navigation Menu Styling */
+    nav {
+      background-color: #006400;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #eaee0f;
+      border-radius: 5px; 
+    }
+
+    /* Dropdown Menu Styling */
+    nav .dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav .dropdown .dropdown-content a {
+      padding: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    nav .dropdown .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    /* Banner Section Styling */
+    .banner {
+      background-image: url('https://via.placeholder.com/1600x600');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 150px 20px;
+            text-align: center;
+    }
+
+    .banner h2 {
+      font-size: 48px;
+            font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    main {
+      padding: 40px;
+      background-color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+
+        .container {
+            display: flex;
+            max-width: 800px;
+            margin: auto;
+            gap: 20px;
+        }
+
+        .property-details {
+            flex: 3;
+        }
+
+        .main-image {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .details {
+            margin-top: 20px;
+        }
+
+        .details h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            color: #2e8b57;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .description h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .gallery {
+            flex: 2;
+        }
+
+        .thumbnail-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .thumbnail-grid img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .pagination button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .pagination button.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .pagination button:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="dkut logo.png" class="logo">
+    <div>
+      <div class="header-text">Marketing Office</div>
+      <div class="subheader-text">Dedan Kimathi University of Technology</div>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Champions Mentorship.html">Champion Mentorship</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="upcomingevents.html">Upcoming Events</a>
+          <a href="pastevents.html">Past Events</a>
+        </div>
+      </li>
+      <li><a href="InfoHub.html">InfoHub</a></li>
+      <li><a href="contacts.html">Contact Us</a></li>
+      <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
+    </ul>
+  </nav>
+
+  <!-- Banner Section -->
+  <section class="banner">
+    <h2>Welcome to Gallery</h2>
+    <p>Your source for information, tutorials, and community resources.</p>
+  </section>
+  <main>
+
+    <div class="container">
+        <div class="property-details">
+            <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Main Property" class="main-image">
+            <div class="details">
+                <h2>8600 Pico St, Los Angeles, CA 90035</h2>
+                <div class="price">$546,000</div>
+                <div class="info">
+                    <p><strong>Bedrooms:</strong> 5</p>
+                    <p><strong>Bathrooms:</strong> 4.5</p>
+                    <p><strong>Size:</strong> 5,400 sq ft</p>
+                </div>
+                <div class="description">
+                    <h3>Description</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="thumbnail-grid">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 1">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 2">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 3">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 4">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 5">
+                <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 6">
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <button class="prev">Previous</button>
+        <div class="page-numbers">
+            <button class="page-number active">1</button>
+            <button class="page-number">2</button>
+            <button class="page-number">3</button>
+        </div>
+        <button class="next">Next</button>
+    </div>
+    </main>
+</body>
+</html>

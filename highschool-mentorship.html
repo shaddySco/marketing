@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highschool Mentorship</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
+
+    header .header-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    header .subheader-text {
+      font-size: 1rem;
+    }
+
+    /* Navigation Menu Styling */
+    nav {
+      background-color: #006400;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #eaee0f;
+      border-radius: 5px; 
+    }
+
+    /* Dropdown Menu Styling */
+    nav .dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav .dropdown .dropdown-content a {
+      padding: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    nav .dropdown .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    .banner {
+      position: relative;
+      overflow: hidden;
+      height: 600px; /* Set the height as per your preference */
+    }
+
+    #banner-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .banner-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .banner-text h1 {
+      font-size: 3rem;
+    }
+
+    .banner-text p {
+      font-size: 1.5rem;
+    }
+
+
+    .main-content {
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #006400;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .mentorship-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .method {
+      padding: 20px;
+      background-color: #9eb619;
+      border-radius: 8px;
+      color: white;
+    }
+
+    .method h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .images-section {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .images-section img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+
+
+    .method a{
+      background-color: #004d00;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 10px;
+      display: inline-block;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .method button:hover {
+      background-color: #006400;
+    }
+
+    .testimonials {
+        background-color: white;
+      padding: 10px;
+      margin: 20px 0;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-direction:column ;
+      display: flex;
+      gap: 10px;
+      border-radius: 8px;
+    
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+    }
+    .testimonial2{
+        display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .testimonial {
+        transition: transform 0.3s ease-in-out;
+      background-color: #9eb619;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    .testimonial h4 {
+      font-size: 1.2rem;
+      color: #006400;
+      margin-bottom: 10px;
+    }
+
+    .testimonial p {
+      color: #333;
+    }
+
+    footer {
+      background-color: #004d00;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <img src="dkut logo.png" class="logo">
+    <div>
+      <div class="header-text">Marketing Office</div>
+      <div class="subheader-text">Dedan Kimathi University of Technology</div>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="Champions Mentorship.html">Champion Mentorship</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="upcomingevents.html">Upcoming Events</a>
+          <a href="pastevents.html">Past Events</a>
+        </div>
+      </li>
+      <li><a href="InfoHub.html">InfoHub</a></li>
+      <li><a href="contacts.html">Contact Us</a></li>
+      <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
+    </ul>
+  </nav>
+  <!-- Banner -->
+  <section class="banner">
+    <video autoplay muted loop id="banner-video">
+      <source src="banner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="banner-text">
+      <h1>Inspiring Future Generations</h1>
+      <p>Empowering high school students through mentorship and guidance.</p>
+    </div>
+  </section>
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <h2>About Highschool Mentorship</h2>
+      <p>Our Highschool Mentorship Program is dedicated to shaping the future of students by providing insights into university life, academic opportunities, and personal development strategies. Managed by our Marketing Champions, the program bridges the gap between high schools and higher education.</p>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1Y9X3dZMYZk?si=QjFa61fhcwMi1ThF" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Mentorship Methods</h2>
+      <div class="mentorship-methods">
+        <div class="method">
+          <h3>1. Campus Visits</h3>
+          <p>High school students visit our campus for a guided tour. They explore labs, interact with lecturers, and learn about our courses. These visits are led by our Marketing Champions, and we ensure that students gain valuable insights into university life and academic opportunities.</p>
+          <div class="images-section">
+            <img src="https://i.pinimg.com/474x/e4/73/d5/e473d5538e4269d23550343bc0fddf8e.jpg" alt="Campus Visit Image 1">
+            <img src="https://i.pinimg.com/474x/e4/73/d5/e473d5538e4269d23550343bc0fddf8e.jpg" alt="Campus Visit Image 2">
+          </div>
+        
+            <a href="">See More</a>
+    
+
+        </div>
+    
+        
+        <div class="method">
+          <h3>2. School Outreach</h3>
+          <p>Our Marketing Champions visit high schools to motivate students, share their journey, and guide them on courses offered at our university. We organize motivational talks, career guidance workshops, and Q&A sessions to help students make informed decisions about their future careers.</p>
+          <div class="images-section">
+            <img src="outreach1.jpg" alt="Outreach Image 1">
+            <img src="outreach2.jpg" alt="Outreach Image 2">
+          </div>
+        
+          <a href="">See more</a>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+        <h2>What Participants Say</h2>
+        <div class="testimonial2">
+        <div class="testimonial">
+          <h4>John Doe, Student</h4>
+          <p>"The campus visit was eye-opening! I now know what I want to study in university."</p>
+        </div>
+        <div class="testimonial">
+          <h4>Jane Smith, Teacher</h4>
+          <p>"The outreach program was very impactful. Our students were inspired to work harder."</p>
+        </div>
+        <div class="testimonial">
+          <h4>Emily Johnson, Student</h4>
+          <p>"Meeting university students motivated me to pursue my dreams with confidence."</p>
+        </div>
+        <div class="testimonial">
+          <h4>Michael Brown, Parent</h4>
+          <p>"The mentorship provided my child with clear guidance for the future. Thank you!"</p>
+        </div>
+        </div>
+      </section>
+
+    <section class="section">
+      <h2>Get Involved</h2>
+      <p>If you would like to request mentorship for your school, please send your request via email to:</p>
+      <p><strong>Email:</strong> <a href="mailto:mentorship@dkut.ac.ke">mentorship@dkut.ac.ke</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Dedan Kimathi University of Technology. All Rights Reserved.</p>
+    <p>Visit our <a href="https://www.dkut.ac.ke/index.php">Official Website</a> for more information.</p>
+  </footer>
+
+</body>
+</html>
