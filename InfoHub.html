@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+
   <title>InfoHub</title>
   <style>
     /* Reset default browser styling */
@@ -348,27 +350,26 @@
       border-radius: 5px; 
     }
 
-    footer {
-            background-color: #004d00;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
+    footer {  
+            background-color: #004d00; 
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+        }  
 
-        footer p {
-            margin: 0;
-            font-size: 14px;
-        }
+        .social-media a {  
+            margin: 0 10px;  
+            color: white;  
+            text-decoration: none;  
+            font-size: 20px;  
+            transition: color 0.3s;  
+        }  
 
-        footer a {
-            color: #FFD700;
-            text-decoration: none;
-        }
+        .social-media a:hover {  
+            color: #c0c0c0;  
+        }  
 
-        footer a:hover {
-            text-decoration: underline;
-        }
 
 
     /* Responsive Design for Smaller Screens */
@@ -401,16 +402,16 @@
   <nav>
     <ul>
       <li><a href="Home.html">Home</a></li>
-      <li><a href="Champions Mentorship.html">Champion Mentorship</a></li>
+      <li><a href="champion.html">Champion Mentorship</a></li>
       <li class="dropdown">
         <a href="#">Events</a>
         <div class="dropdown-content">
           <a href="upcomingevents.html">Upcoming Events</a>
-          <a href="pastevents.html">Past Events</a>
+          <a href="events.html">Past Events</a>
         </div>
       </li>
       <li><a href="InfoHub.html">InfoHub</a></li>
-      <li><a href="contacts.html">Contact Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
       <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
     </ul>
   </nav>
@@ -443,7 +444,7 @@
         <h3>Newsletters</h3>
         <img src="https://i.pinimg.com/736x/a6/31/a7/a631a7ab56acf08e90d48e7175e9f03f.jpg" alt="Campus" />
         <p>Explore all the amenities and opportunities available on campus.</p>
-        <a href="#" class="visit-button">Explore</a>
+        <a href="newsletter.html" class="visit-button">Explore</a>
       </div>
     </div>
     </section>
@@ -465,7 +466,7 @@
           <p>Events</p>
         </div>
       </div>
-      <div class="view-more">View More</div>
+      <div class="view-more"><a href="gallery.html">View More</a></div>
     </section>
 
     <!-- News Section -->
@@ -493,10 +494,16 @@
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>
-      <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
-  </footer>
+    <footer>  
+      <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>  
+      <div class="social-media">  
+          <h3>Follow Us:</h3>  
+          <a href="#"><i class="fab fa-facebook"></i></a>  
+          <a href="#"><i class="fab fa-twitter"></i></a>  
+          <a href="#"><i class="fab fa-instagram"></i></a>  
+          <a href="#"><i class="fab fa-linkedin"></i></a>  
+      </div>  
+  </footer>  
     
   </main>
 </body>

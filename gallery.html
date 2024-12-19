@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Listing</title>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+
     <style>
         * {
             margin: 0;
@@ -218,6 +220,25 @@
         .pagination button:hover {
             background-color: #ddd;
         }
+        footer {  
+            background-color: #004d00; 
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+        }  
+
+        .social-media a {  
+            margin: 0 10px;  
+            color: white;  
+            text-decoration: none;  
+            font-size: 20px;  
+            transition: color 0.3s;  
+        }  
+
+        .social-media a:hover {  
+            color: #c0c0c0;  
+        }  
     </style>
 </head>
 <body>
@@ -233,7 +254,7 @@
   <nav>
     <ul>
       <li><a href="Home.html">Home</a></li>
-      <li><a href="Champions Mentorship.html">Champion Mentorship</a></li>
+      <li><a href="gallery.html">Champion Mentorship</a></li>
       <li class="dropdown">
         <a href="#">Events</a>
         <div class="dropdown-content">
@@ -242,7 +263,7 @@
         </div>
       </li>
       <li><a href="InfoHub.html">InfoHub</a></li>
-      <li><a href="contacts.html">Contact Us</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
       <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
     </ul>
   </nav>
@@ -253,23 +274,20 @@
     <p>Your source for information, tutorials, and community resources.</p>
   </section>
   <main>
+    <div>
+    <div class="details">
+      <h2>Highschool Mentorship Photos</h2>
+
+      <div class="description">
+          <h3>Description</h3>
+          <p>The High School Mentorship Program connects university students with high schoolers, providing guidance in academics, career exploration, and personal growth. Mentors offer one-on-one support, workshops, and community outreach activities, helping students build leadership skills and confidence. The following gallery showcases key moments from the program, including study sessions, career workshops, and volunteer events, illustrating the positive impact of mentorship and community involvement.</p>
+      </div>
+  </div>
 
     <div class="container">
         <div class="property-details">
             <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Main Property" class="main-image">
-            <div class="details">
-                <h2>8600 Pico St, Los Angeles, CA 90035</h2>
-                <div class="price">$546,000</div>
-                <div class="info">
-                    <p><strong>Bedrooms:</strong> 5</p>
-                    <p><strong>Bathrooms:</strong> 4.5</p>
-                    <p><strong>Size:</strong> 5,400 sq ft</p>
-                </div>
-                <div class="description">
-                    <h3>Description</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </div>
+            
         </div>
         <div class="gallery">
             <div class="thumbnail-grid">
@@ -282,15 +300,54 @@
             </div>
         </div>
     </div>
+    </div>
+
+    <div>
+      <div class="details">
+        <h2>MSD@2 Photos</h2>
+  
+        <div class="description">
+            <h3>Description</h3>
+            <p>The High School Mentorship Program connects university students with high schoolers, providing guidance in academics, career exploration, and personal growth. Mentors offer one-on-one support, workshops, and community outreach activities, helping students build leadership skills and confidence. The following gallery showcases key moments from the program, including study sessions, career workshops, and volunteer events, illustrating the positive impact of mentorship and community involvement.</p>
+        </div>
+    </div>
+  
+      <div class="container">
+          <div class="property-details">
+              <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Main Property" class="main-image">
+              
+          </div>
+          <div class="gallery">
+              <div class="thumbnail-grid">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 1">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 2">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 3">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 4">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 5">
+                  <img src="https://i.pinimg.com/474x/eb/33/ef/eb33ef74d68c4d375f7744c33309824a.jpg" alt="Gallery Image 6">
+              </div>
+          </div>
+      </div>
+      </div>
+    
     <div class="pagination">
-        <button class="prev">Previous</button>
+
         <div class="page-numbers">
-            <button class="page-number active">1</button>
+            <button class="page-number active"><a href="home.html">1</a></button>
             <button class="page-number">2</button>
             <button class="page-number">3</button>
         </div>
-        <button class="next">Next</button>
     </div>
     </main>
+    <footer>  
+      <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>  
+      <div class="social-media">  
+          <h3>Follow Us:</h3>  
+          <a href="#"><i class="fab fa-facebook"></i></a>  
+          <a href="#"><i class="fab fa-twitter"></i></a>  
+          <a href="#"><i class="fab fa-instagram"></i></a>  
+          <a href="#"><i class="fab fa-linkedin"></i></a>  
+      </div>  
+  </footer> 
 </body>
 </html>

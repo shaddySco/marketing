@@ -1,193 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohio University</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Marketing Department</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            margin: 0;  
+            padding: 0;  
+            background-color: #f4f4f4;  
+            color: #333;  
+        }  
+   header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+     
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
 
-        header {
-            background-color: #0056b3;
-            color: white;
-            padding: 20px 0;
-        }
+    header .logo img {
+      width: 50px;
+      margin-right: 10px;
+    }
 
-        .logo {
-            font-size: 24px;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    header div {
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+    }
 
-        nav {
-            text-align: center;
-        }
+    header .header-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: inline-block;
-        }
+    header .subheader-text {
+      font-size: 1rem;
+    }
 
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
+    /* Navigation Menu Styling */
+    nav {
+      background-color: #006400;
+      padding: 10px 0;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-        nav ul li a:hover {
-            color: #c0c0c0;
-        }
+    nav ul li {
+      position: relative;
+    }
 
-        .hero {
-            background-image: url('https://source.unsplash.com/1600x900/?college,campus');
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+      text-align: center;
+    }
+
+    nav ul li a:hover {
+      background-color: #eaee0f;
+      border-radius: 5px; 
+    }
+
+    /* Dropdown Menu Styling */
+    nav .dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav .dropdown .dropdown-content a {
+      padding: 10px;
+      text-align: left;
+      color: white;
+    }
+
+    nav .dropdown .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+
+        .hero {  
+            background-image: url('https://via.placeholder.com/1600x600');
             background-size: cover;
-            height: 400px;
+            background-position: center;
             color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 150px 20px;
             text-align: center;
-            padding: 20px;
-            animation: fadeIn 2s ease-in-out;
-        }
+        }  
 
-        .hero h1 {
-            font-size: 36px;
-            animation: slideInLeft 1s ease-out;
-        }
+        .hero h1 {   
+            font-size: 48px;
+            font-weight: bold;
+            animation: slideInLeft 1s ease-out;  
+        }  
 
-        .hero p {
-            font-size: 18px;
-            animation: fadeInUp 2s ease-in-out;
-        }
+        .hero p {  
+            font-size: 18px;  
+            margin-top: 10px;
+            animation: fadeInUp 2s ease-in-out;  
+        }  
 
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 1200px;
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            animation: fadeInUp 2s ease-in-out;
-        }
+        section {  
+            padding: 20px;  
+            margin: 20px auto;  
+            max-width: 1200px;  
+            background-color: white;  
+            border-radius: 5px;  
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);  
+            animation: fadeInUp 2s ease-in-out;  
+        }  
 
-        section h2 {
-            color: #0056b3;
-            animation: slideInLeft 1s ease-out;
-        }
+        section h2 {  
+            color: #0056b3;  
+            animation: slideInLeft 1s ease-out;  
+        }  
 
-        footer {
-            background-color: #0056b3;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            position: relative;
-        }
+        footer {  
+            background-color: #004d00; 
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+        }  
 
-        .social-media a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            transition: color 0.3s;
-        }
+        .social-media a {  
+            margin: 0 10px;  
+            color: white;  
+            text-decoration: none;  
+            font-size: 20px;  
+            transition: color 0.3s;  
+        }  
 
-        .social-media a:hover {
-            color: #c0c0c0;
-        }
+        .social-media a:hover {  
+            color: #c0c0c0;  
+        }  
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
-        }
+        @keyframes fadeIn {  
+            0% { opacity: 0; }  
+            100% { opacity: 1; }  
+        }  
 
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeInUp {  
+            0% { opacity: 0; transform: translateY(20px); }  
+            100% { opacity: 1; transform: translateY(0); }  
+        }  
 
-        @keyframes slideInLeft {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(0); }
-        }
-    </style>
-</head>
-<body>
+        @keyframes slideInLeft {  
+            0% { transform: translateX(-100%); }  
+            100% { transform: translateX(0); }  
+        }  
+    </style>  
+</head>  
+<body>  
 
-<header>
-    <div class="logo">Ohio University</div>
-    <nav>
+    <header>
+        <img src="dkut logo.png" class="logo">
+        <div>
+          <div class="header-text">Marketing Office</div>
+          <div class="subheader-text">Dedan Kimathi University of Technology</div>
+        </div>
+      </header>
+    
+      <!-- Navigation Menu -->
+      <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#admissions">Admissions</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#campus-life">Campus Life</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="champion.html">Champion Mentorship</a></li>
+          <li class="dropdown">
+            <a href="#">Events</a>
+            <div class="dropdown-content">
+              <a href="upcomingevents.html">Upcoming Events</a>
+              <a href="events.html">Past Events</a>
+            </div>
+          </li>
+          <li><a href="InfoHub.html">InfoHub</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
         </ul>
-    </nav>
-</header>
+      </nav> 
 
-<div class="hero">
-    <h1>Welcome to Ohio University</h1>
-    <p>Your journey starts here</p>
-</div>
+<div class="hero">  
+    <h1>welcome to Marketing Department</h1>  
+    <p>Your journey starts here</p>  
+</div>  
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>Ohio University is a prestigious institution providing a diverse range of programs and degrees designed to prepare students for success.</p>
-    <img src="https://source.unsplash.com/1600x900/?campus,students" alt="Ohio University Campus" style="width: 100%; height: auto; border-radius: 8px;">
-</section>
+<section id="vision">  
+    <h2>Vision</h2>  
+    <p>“To be the lead department to increase the overall visibility, enhance the reputation, and to increase enrollment of students to the University.”</p>  
+</section>  
 
-<section id="admissions">
-    <h2>Admissions</h2>
-    <p>Learn about our admission process, requirements, and application deadlines. Join a community of scholars and innovators.</p>
-    <img src="https://source.unsplash.com/1600x900/?admissions,students" alt="Admissions Office" style="width: 100%; height: auto; border-radius: 8px;">
-</section>
+<section id="mission">  
+    <h2>Mission</h2>  
+    <p>“To be the source of marketing information and advice, to both Internal and external customers with a view to placing the university in the cutting edge of providing Quality education and technology transfer.”</p>  
+</section>  
 
-<section id="academics">
-    <h2>Academics</h2>
-    <p>Explore our academic programs, resources, and the faculty that make Ohio University exceptional.</p>
-    <img src="https://source.unsplash.com/1600x900/?library,education" alt="Ohio University Academics" style="width: 100%; height: auto; border-radius: 8px;">
-</section>
+<section id="objectives">  
+    <h2>Strategic Objectives</h2>  
+    <ol>  
+        <li>Increase SSP enrollment by 15% per year in all programmes from the current through  
+            <ol type="a">  
+                <li>Internal Marketing by ensuring that at least 20% translate to the next level of programmes</li>  
+                <li>Developing DeKUT culture that supports customer focus</li>  
+                <li>Targeted marketing for all intakes</li>  
+            </ol>  
+        </li>  
+        <li>Enhancing the University’s reputation and visibility</li>  
+        <li>Increase the effectiveness of our promotional efforts through the incorporation of success metrics/cost-benefit analysis.</li>  
+    </ol>  
+</section>  
 
-<section id="research">
-    <h2>Research</h2>
-    <p>Ohio University is dedicated to innovative research that tackles global challenges and enhances the quality of life.</p>
-    <img src="https://source.unsplash.com/1600x900/?research,innovation" alt="Research Labs" style="width: 100%; height: auto; border-radius: 8px;">
-</section>
+<footer>  
+    <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>  
+    <div class="social-media">  
+        <h3>Follow Us:</h3>  
+        <a href="#"><i class="fab fa-facebook"></i></a>  
+        <a href="#"><i class="fab fa-twitter"></i></a>  
+        <a href="#"><i class="fab fa-instagram"></i></a>  
+        <a href="#"><i class="fab fa-linkedin"></i></a>  
+    </div>  
+</footer>  
 
-<section id="campus-life">
-    <h2>Campus Life</h2>
-    <p>Discover the vibrant campus life, including student organizations, events, and recreational activities that enrich the student experience.</p>
-    <img src="https://source.unsplash.com/1600x900/?student-life,activities" alt="Campus Life" style="width: 100%; height: auto; border-radius: 8px;">
-</section>
-
-<footer>
-    <p>&copy; 2024 Ohio University. All rights reserved.</p>
-    <div class="social-media">
-        <h3>Follow Us:</h3>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-    </div>
-</footer>
-
-</body>
+</body>  
 </html>

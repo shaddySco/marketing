@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Highschool Mentorship</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+
   <style>
     * {
       margin: 0;
@@ -83,14 +85,16 @@
 
     /* Dropdown Menu Styling */
     nav .dropdown .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #333;
-      min-width: 160px;
-      top: 100%;
-      left: 0;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; /* Ensure it's above the video */
+}
+
 
     nav .dropdown:hover .dropdown-content {
       display: block;
@@ -99,7 +103,7 @@
     nav .dropdown .dropdown-content a {
       padding: 10px;
       text-align: left;
-      color: white;
+      color: rgb(226, 98, 98);
     }
 
     nav .dropdown .dropdown-content a:hover {
@@ -107,19 +111,22 @@
     }
 
     .banner {
-      position: relative;
-      overflow: hidden;
-      height: 600px; /* Set the height as per your preference */
-    }
+  position: relative;
+  overflow: hidden;
+  height: 600px; /* Set the height as per your preference */
+  z-index: 1; /* Lower the z-index of the banner */
+}
 
-    #banner-video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+#banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0; /* Ensure the video stays behind other elements */
+}
+
 
     .banner-text {
       position: absolute;
@@ -259,22 +266,26 @@
       color: #333;
     }
 
-    footer {
-      background-color: #004d00;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
+    footer {  
+            background-color: #004d00; 
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+        }  
 
-    footer a {
-      color: #FFD700;
-      text-decoration: none;
-    }
+        .social-media a {  
+            margin: 0 10px;  
+            color: white;  
+            text-decoration: none;  
+            font-size: 20px;  
+            transition: color 0.3s;  
+        }  
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+        .social-media a:hover {  
+            color: #c0c0c0;  
+        }  
+        
   </style>
 </head>
 <body>
@@ -306,9 +317,7 @@
   </nav>
   <!-- Banner -->
   <section class="banner">
-    <video autoplay muted loop id="banner-video">
-      <source src="banner.mp4" type="video/mp4">
-      Your browser does not support the video tag.
+    
     </video>
     <div class="banner-text">
       <h1>Inspiring Future Generations</h1>
@@ -336,7 +345,7 @@
             <img src="https://i.pinimg.com/474x/e4/73/d5/e473d5538e4269d23550343bc0fddf8e.jpg" alt="Campus Visit Image 2">
           </div>
         
-            <a href="">See More</a>
+            <a href="gallery.html">See More</a>
     
 
         </div>
@@ -350,7 +359,7 @@
             <img src="outreach2.jpg" alt="Outreach Image 2">
           </div>
         
-          <a href="">See more</a>
+          <a href="gallery.html">See more</a>
         </div>
       </div>
     </section>
@@ -384,10 +393,16 @@
   </main>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Dedan Kimathi University of Technology. All Rights Reserved.</p>
-    <p>Visit our <a href="https://www.dkut.ac.ke/index.php">Official Website</a> for more information.</p>
-  </footer>
+  <footer>  
+    <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>  
+    <div class="social-media">  
+        <h3>Follow Us:</h3>  
+        <a href="#"><i class="fab fa-facebook"></i></a>  
+        <a href="#"><i class="fab fa-twitter"></i></a>  
+        <a href="#"><i class="fab fa-instagram"></i></a>  
+        <a href="#"><i class="fab fa-linkedin"></i></a>  
+    </div>  
+</footer>  
 
 </body>
 </html>

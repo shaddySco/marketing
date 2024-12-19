@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us with Social Links</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">  
+
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    header {
+      background-color: #006400;
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header img {
+      width: 50px;
+      margin-right: 10px;
+    }
+
+    header div {
+      margin-left: 10px;
+    }
+
+    .header-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .subheader-text {
+      font-size: 1rem;
+    }
+
+    nav {
+      background-color: #006400;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+     
+    }
+    nav ul li{
+      position: relative:
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block ;
+      text-align: center;
+    }
+
+
+    nav ul li a:hover {
+      background-color: #eaee0f;
+      border-radius: 5px;
+    }
+
+    nav .dropdown {
+      position: relative;
+    }
+
+    nav .dropdown .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    nav .dropdown .dropdown-content a {
+      color: white;
+      padding: 10px;
+      display: block;
+      text-align: left;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px auto;
+      max-width: 1200px;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .contact-info,
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+    }
+
+    .contact-info {
+      background-color: green;
+      color: white;
+    }
+
+    .contact-info h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p span {
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .social-links img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid white;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-links img:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-form h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+    }
+
+    .contact-form button {
+      background-color: green;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #53a061;
+    }
+    footer {  
+            background-color: #004d00; 
+            color: white;  
+            text-align: center;  
+            padding: 20px 0;  
+            position: relative;  
+        }  
+
+        .social-media a {  
+            margin: 0 10px;  
+            color: white;  
+            text-decoration: none;  
+            font-size: 20px;  
+            transition: color 0.3s;  
+        }  
+
+        .social-media a:hover {  
+            color: #c0c0c0;  
+        }  
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-info,
+      .contact-form {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="dkut logo.png" alt="Logo">
+    <div>
+      <div class="header-text">Marketing Office</div>
+      <div class="subheader-text">Dedan Kimathi University of Technology</div>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="champion.html">Champion Mentorship</a></li>
+      <li class="dropdown">
+        <a href="#">Events</a>
+        <div class="dropdown-content">
+          <a href="upcomingevents.html">Upcoming Events</a>
+          <a href="pastevents.html">Past Events</a>
+        </div>
+      </li>
+      <li><a href="InfoHub.html">InfoHub</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="https://www.dkut.ac.ke/index.php">University Website</a></li>
+    </ul>
+  </nav>
+
+  <div class="contact-container">
+    <div class="contact-info">
+      <h2>Reach us through our social media platforms:</h2>
+      <p><span>📞 Contact:</span>+254 713123021</p>
+      <div class="social-links">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/3955/3955024.png" alt="Instagram"><span>Instagram</span></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/5968/5968830.png" alt="Twitter"><span>Twitter</span></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1051/1051309.png" alt="Facebook"><span>Facebook</span></a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <h2>Get in Touch</h2>
+      <form action="mailto:marketing@dkut.ac.ke" method="post">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Type your message here..." rows="5" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>  
+    <p>&copy; 2024 Dedan Kimathi University of Technology. All rights reserved.</p>  
+    <div class="social-media">  
+        <h3>Follow Us:</h3>  
+        <a href="#"><i class="fab fa-facebook"></i></a>  
+        <a href="#"><i class="fab fa-twitter"></i></a>  
+        <a href="#"><i class="fab fa-instagram"></i></a>  
+        <a href="#"><i class="fab fa-linkedin"></i></a>  
+    </div>  
+</footer> 
+</body>
+</html>
